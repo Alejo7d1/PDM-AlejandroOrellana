@@ -12,6 +12,13 @@ data class NoteDTO (
     val date: String
 )
 
+@Serializable
+data class PostNoteDTO(
+    val title: String,
+    val body: String,
+    val author: String
+)
+
 fun NoteDTO.toModel(): Note{
     return Note(
         id = id,
